@@ -1,0 +1,248 @@
+{
+  "project_info": {
+    "project_number": "501821112977",
+    "firebase_url": "https://agooday-6eda8.firebaseio.com",
+    "project_id": "agooday-6eda8",
+    "storage_bucket": "agooday-6eda8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501821112977:android:96d67828208d747c",
+        "android_client_info": {
+          "package_name": "com.agooday.baseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3OVw2-BRHIoWw3LRGjo0k7JZNPTBGxJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501821112977:android:4b0c68885627f2ec",
+        "android_client_info": {
+          "package_name": "com.agooday.datausage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3OVw2-BRHIoWw3LRGjo0k7JZNPTBGxJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4064594014466732~7514121536"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501821112977:android:83317b9474589869",
+        "android_client_info": {
+          "package_name": "com.agooday.focusmode"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3OVw2-BRHIoWw3LRGjo0k7JZNPTBGxJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501821112977:android:8d4671ab057be970",
+        "android_client_info": {
+          "package_name": "com.agooday.fullscreengestures"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3OVw2-BRHIoWw3LRGjo0k7JZNPTBGxJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4064594014466732~2519920629"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501821112977:android:eccf0c30183a9e12",
+        "android_client_info": {
+          "package_name": "com.agooday.permission"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3OVw2-BRHIoWw3LRGjo0k7JZNPTBGxJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4064594014466732~1990332119"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501821112977:android:247d71fe477a51b8",
+        "android_client_info": {
+          "package_name": "com.agooday.screentime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3OVw2-BRHIoWw3LRGjo0k7JZNPTBGxJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4064594014466732~5895132813"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501821112977:android:32b64234920eb351",
+        "android_client_info": {
+          "package_name": "com.agooday.skipads"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3OVw2-BRHIoWw3LRGjo0k7JZNPTBGxJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4064594014466732~1962085336"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501821112977:android:bbc1c6145896a565",
+        "android_client_info": {
+          "package_name": "com.vinance.lockdown"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3OVw2-BRHIoWw3LRGjo0k7JZNPTBGxJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501821112977-ae3nmfh5gnlhm7v527gtt00rifuo4csh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
