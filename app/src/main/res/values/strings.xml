@@ -4,4 +4,32 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="thank_you_very_much">Thank you very much.</string>
+
+
+    <string name="buy_premium_version">$1.49 Premium version no ads</string>
+    <string name="buy_me_a_coffee">$4.99 Buy me a cup of coffee</string>
+    <string name="support_development_team">$9.99 Support development team</string>
+    <string name="upgrade">Upgrade</string>
+
+
+    <string name="upgrade_sum">Support premium version only, do you want to upgrade?</string>
+    <string name="lbl_pro_version">Premium</string>
+    <string name="lbl_3_days_free">3 days FREE</string>
+    <string name="iap_start">start</string>
+    <string name="lbl_3_months">3 months</string>
+    <string name="buy">buy</string>
+    <string name="lbl_1_year">1 year</string>
+    <string name="restore_purchases">Restore Purchases</string>
+    <string name="no_ads">No ads</string>
+
+    <string name="iap_save">SAVE</string>
+    <string name="dialog_suggest_purchase_title">Check out Premium!</string>
+    <string name="dialog_suggest_purchase_message">Would you like to try premium features (App Limits, Secure App by Pattern, No Ads) for FREE?</string>
+    <string name="dialog_suggest_purchase_later">MAYBE LATER</string>
+    <string name="dialog_suggest_purchase_try_free">TRY FOR FREE</string>
+    <string name="remove_ad">Remove ads</string>
+    <string name="install">Install</string>
+    <string name="pattern_lock">Pattern Lock</string>
+    <string name="app_limits">App Limits</string>
+
 </resources>

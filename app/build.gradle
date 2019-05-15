@@ -54,4 +54,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.8'
     implementation'com.google.firebase:firebase-firestore:18.1.0'
     implementation 'com.google.firebase:firebase-config:16.4.1'
+
+    implementation 'com.android.billingclient:billing:1.2'
+    implementation 'com.github.DingMouRen:LayoutManagerGroup:1e6f4f96eb'
 }

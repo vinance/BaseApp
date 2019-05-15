@@ -12,20 +12,30 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.provider.Settings
+import android.view.View
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityManager
+import android.view.animation.Animation
+import android.view.animation.LinearInterpolator
+import android.view.animation.RotateAnimation
 import com.agooday.baseapp.BuildConfig
 import com.agooday.baseapp.MainActivity
 import com.agooday.baseapp.R
+import com.agooday.baseapp.base.BaseApp
 import com.agooday.preference.AGDPreferenceManager
 import com.agooday.preference.model.PrefBoolean
+import com.agooday.preference.model.PrefInt
 import com.agooday.preference.model.PrefLong
 
 
 object AppUtil {
 
 
-
+    fun log(ob:Any,content:String){
+        if(BuildConfig.DEBUG){
+            Log.d("tien.hien",ob.javaClass.simpleName+": "+content)
+        }
+    }
 
 
     fun log(content:String){
@@ -36,6 +46,8 @@ object AppUtil {
 
 
     var isPremium by PrefBoolean( "PREMIUM_VERSION", true)
+    var isNeedAskReview by PrefBoolean( "NEED_ASK_REVIEW", false)
+    var reviewCount by PrefInt( "REVIEW_COUNT", 0)
 
 
     var timeShowAskUpgrade by PrefLong( "TIME_SHOW_ASK_UP", 0L)
@@ -183,29 +195,41 @@ object AppUtil {
 
     }
 
-    fun setInt(context: Context, name: String, value: Int) {
+
+
+    fun setLong( name: String, value: Long) {
+        AGDPreferenceManager.getInstance().sADGPreferences.edit().putLong(name, value).apply()
+    }
+
+
+    fun getLong(name: String, defaultValue: Long): Long {
+        return AGDPreferenceManager.getInstance().sADGPreferences.getLong(name, defaultValue)
+    }
+
+
+    fun setInt( name: String, value: Int) {
         AGDPreferenceManager.getInstance().sADGPreferences.edit().putInt(name, value).apply()
     }
 
-    fun setBoolean(context: Context, name: String, value: Boolean) {
+    fun setBoolean( name: String, value: Boolean) {
         AGDPreferenceManager.getInstance().sADGPreferences.edit().putBoolean(name, value).apply()
     }
 
-    fun getBoolean(context: Context, name: String, defaultValue: Boolean): Boolean {
+    fun getBoolean( name: String, defaultValue: Boolean): Boolean {
         return AGDPreferenceManager.getInstance().sADGPreferences.getBoolean(name, defaultValue)
     }
 
 
-    fun setString(context: Context, name: String, value: String) {
+    fun setString(name: String, value: String) {
         AGDPreferenceManager.getInstance().sADGPreferences.edit().putString(name, value).apply()
     }
 
-    fun getInt(context: Context, name: String, defaultValue: Int): Int {
+    fun getInt(name: String, defaultValue: Int): Int {
         return AGDPreferenceManager.getInstance().sADGPreferences.getInt(name, defaultValue)
     }
 
 
-    fun getString(context: Context, name: String, defaultValue: String): String {
+    fun getString( name: String, defaultValue: String): String {
         return AGDPreferenceManager.getInstance().sADGPreferences.getString(name, defaultValue)!!
     }
 
@@ -248,5 +272,76 @@ object AppUtil {
         } else {
             true
         }
+    }
+
+
+    fun getSkuList(): List<String> {
+        return when (getIapLevel()) {
+            2L -> listOf("sub_monthly_2", "sub_3_months_2", "sub_yearly_2")
+            3L -> listOf("sub_monthly_3", "sub_3_months_3", "sub_yearly_3")
+            4L -> listOf("sub_monthly_4", "sub_3_months_4", "sub_yearly_4")
+            5L -> listOf("sub_monthly_5", "sub_3_months_5", "sub_yearly_5")
+            else -> listOf("sub_monthly", "sub_3_months", "sub_yearly")
+        }
+    }
+
+    fun rotateView(view: View) {
+        val rotate = RotateAnimation(0f, 360f,
+            Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
+        rotate.duration = 500
+        rotate.repeatCount = 1
+        rotate.interpolator = LinearInterpolator()
+        view.startAnimation(rotate)
+    }
+
+
+
+    fun getIapLevel(): Long {
+        return getLong( Constant.REMOTE_CONFIGS_IAP_LEVEL, -1L)
+    }
+
+    fun setIapLevel(level: Long) {
+        setLong( Constant.REMOTE_CONFIGS_IAP_LEVEL, level)
+    }
+
+    fun getLastTimeSuggestPurchase(): Long {
+        return getLong("LastTimeSuggestPurchase", 0L)
+    }
+
+    fun setLastTimeSuggestPurchase(time: Long) {
+        setLong("LastTimeSuggestPurchase", time)
+    }
+
+    fun setLastTimeAskReview(timeMillis: Long) {
+        setLong("LastTimeAskReview", timeMillis)
+    }
+
+    fun getLastTimeAskReview(): Long {
+        return getLong("LastTimeAskReview", 0L)
+    }
+
+
+    fun getPriceSubscription3Months(): String {
+        return getString("PriceSubscription3Months", "")!!
+    }
+
+    fun getPriceSubscriptionYearly(): String {
+        return getString("PriceSubscriptionYearly", "")!!
+    }
+
+    fun getSavePercentage(): String {
+        return getString( "keySavePercentage", "")!!
+    }
+
+    fun setSavePercentage(savePercentage: String) {
+        setString("keySavePercentage", savePercentage)
+    }
+
+    fun setPriceSubscription3Months(price: String) {
+        setString("PriceSubscription3Months", price)
+    }
+
+    fun setPriceSubscriptionYearly(context: Context, price: String) {
+        setString( "PriceSubscriptionYearly", price)
     }
 }

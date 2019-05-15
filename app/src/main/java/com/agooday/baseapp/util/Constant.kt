@@ -16,34 +16,16 @@ object Constant {
     const val PRODUCT_ID_2 = "com.agooday.permission.2"
 
 
-    const   val OPEN_DETAIL_PERMISSION = "open_detail_permission"
-    const  val OPEN_DETAIL_PERMISSION_DF = false
-
-    const  val PASS_SERVICE_PG = "pass_pg"
-    const val PASS_SERVICE_PG_DF = -1
-
 
 
     const val UPDATE_ACTION = "com.agooday.permission.position.action"
 
-    const val POSITION = "position"
-    const val POSITION_DF = 0
 
 
-    const  val PERMISSION_TRACKER = "permission_tracker"
-    const  val PERMISSION_TRACKER_DF = true
-    const  val SUPPORT_TOUCH = "support_touch"
-    const  val SUPPORT_TOUCH_DF = false
-
-    const  val IGNORE_SYSTEM = "ignore_system"
-    const  val IGNORE_SYSTEM_DF = false
-    const   val HIDE_APP_NO_PERMISSION = "hide_no_per"
-    const  val HIDE_APP_NO_PERMISSION_DF = true
-    const  val HIDE_APP_NO_GRANTED_PERMISSION = "hide_no_grant_per"
-    const  val HIDE_APP_NO_GRANTED_PERMISSION_DF = false
-
-    const val REVIEW_ASK = "ASK_REVIEW"
-    const val REVIEW_COUNT_OPEN = "COUNT_OPEN"
     const val REVIEW_MAX_OPEN = 5
     const  val PREMIUM = "premium"
+    const val MIN_TIME_TO_SHOW_SUGGEST_PURCHASE_DIALOG = 2 * 24 * 60 * 60 * 1000
+    const val REMOTE_CONFIGS_IAP_LEVEL = "REMOTE_CONFIGS_IAP_LEVEL"
+    const val MIN_TIME_ASKING_FOR_REVIEW: Long = 3 * 60 * 1000
+
 }
