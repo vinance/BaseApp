@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import com.agooday.baseapp.R
+import com.agooday.baseapp.base.BaseActivity
 import com.agooday.baseapp.util.AppUtil
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdLoader
@@ -17,11 +18,11 @@ import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.google.android.gms.ads.formats.UnifiedNativeAdView
 
 object NativeAdUtils {
-    fun inflateNativeAd(activity: BaseBillingActivity, adIds: Array<String>, container: ViewGroup, layoutResourceId: Int) {
+    fun inflateNativeAd(activity: BaseActivity, adIds: Array<String>, container: ViewGroup, layoutResourceId: Int) {
         inflateNativeAd(activity, adIds, container, layoutResourceId, 0)
     }
 
-    private fun inflateNativeAd(activity: BaseBillingActivity?, adIds: Array<String>, container: ViewGroup?, layoutResourceId: Int, count: Int) {
+    private fun inflateNativeAd(activity: BaseActivity?, adIds: Array<String>, container: ViewGroup?, layoutResourceId: Int, count: Int) {
         if (activity == null || container == null
                 || AppUtil.isPremium) {
             return
@@ -63,7 +64,7 @@ object NativeAdUtils {
         adLoader.loadAd(AdUtils.getDefaultAdRequest())
     }
 
-    private fun populateUnifiedNativeAdView(activity: BaseBillingActivity?, nativeAd: UnifiedNativeAd, adView: UnifiedNativeAdView) {
+    private fun populateUnifiedNativeAdView(activity: BaseActivity?, nativeAd: UnifiedNativeAd, adView: UnifiedNativeAdView) {
         // Set the media view. Media content will be automatically populated in the media view once
         // adView.setNativeAd() is called.
         val mediaView: MediaView = adView.findViewById(R.id.ad_media)
@@ -146,7 +147,7 @@ object NativeAdUtils {
         val btnRemoveAds: View = adView.findViewById(R.id.btn_remove_ad)
         btnRemoveAds.setOnClickListener {
             if (activity != null && !activity.isFinishing) {
-                activity.buyRemoveAds()
+                activity.buySubItem(AppUtil.getSkuList()[0])
             }
         }
 

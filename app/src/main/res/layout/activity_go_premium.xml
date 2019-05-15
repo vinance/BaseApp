@@ -13,7 +13,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <com.agooday.screentime.cusview.InterceptRelativeLayout
+        <com.agooday.baseapp.cusview.InterceptRelativeLayout
             android:id="@+id/rela_intercept_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -54,7 +54,7 @@
                     />
 
             </LinearLayout>
-        </com.agooday.screentime.cusview.InterceptRelativeLayout>
+        </com.agooday.baseapp.cusview.InterceptRelativeLayout>
 
     </FrameLayout>
 

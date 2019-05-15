@@ -13,6 +13,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProviders
+import com.agooday.baseapp.ad.AdUtils
+import com.agooday.baseapp.ad.AdsId
+import com.agooday.baseapp.ad.NativeAdUtils
 import com.agooday.baseapp.base.BaseActivity
 import com.agooday.baseapp.ina.GoPremiumActivity
 import com.agooday.baseapp.util.AppBundle
@@ -22,6 +25,7 @@ import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.doubleclick.PublisherInterstitialAd
 import io.reactivex.disposables.CompositeDisposable
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity()  {
 
@@ -39,19 +43,15 @@ class MainActivity : BaseActivity()  {
 
     lateinit var mainViewModel: MainViewModel
 
-    private lateinit var textMessage: TextView
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                textMessage.setText(R.string.title_home)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
-                textMessage.setText(R.string.title_dashboard)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-                textMessage.setText(R.string.title_notifications)
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -67,13 +67,18 @@ class MainActivity : BaseActivity()  {
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+        sub.setOnClickListener {
+            startActivity(Intent(this,GoPremiumActivity::class.java))
+        }
+        pur.setOnClickListener {
+            buyInApp(Constant.PRODUCT_ID_0)
+        }
 
         MobileAds.initialize(this, "ca-app-pub-4064594014466732~1990332119")
         mPublisherInterstitialAd = PublisherInterstitialAd(this)
 
-
+        NativeAdUtils.inflateNativeAd(this, AdsId.nativeAds, nativeAdContainer, R.layout.layout_native_ad)
         if(BuildConfig.DEBUG){
             mPublisherInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
         }else{
