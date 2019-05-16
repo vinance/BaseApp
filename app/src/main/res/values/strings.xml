@@ -24,12 +24,17 @@
 
     <string name="iap_save">SAVE</string>
     <string name="dialog_suggest_purchase_title">Check out Premium!</string>
-    <string name="dialog_suggest_purchase_message">Would you like to try premium features (App Limits, Secure App by Pattern, No Ads) for FREE?</string>
+    <string name="dialog_suggest_purchase_message">Would you like to try premium features (App Limits, Secure App by
+        Pattern, No Ads) for FREE?
+    </string>
     <string name="dialog_suggest_purchase_later">MAYBE LATER</string>
     <string name="dialog_suggest_purchase_try_free">TRY FOR FREE</string>
     <string name="remove_ad">Remove ads</string>
     <string name="install">Install</string>
     <string name="pattern_lock">Pattern Lock</string>
     <string name="app_limits">App Limits</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

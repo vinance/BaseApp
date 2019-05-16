@@ -22,6 +22,7 @@ import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.doubleclick.PublisherInterstitialAd
 import io.reactivex.disposables.CompositeDisposable
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity()  {
 
@@ -39,19 +40,17 @@ class MainActivity : BaseActivity()  {
 
     lateinit var mainViewModel: MainViewModel
 
-    private lateinit var textMessage: TextView
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                textMessage.setText(R.string.title_home)
+                showFragment(AppBundle(Constant.TEST_TAG,null))
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
-                textMessage.setText(R.string.title_dashboard)
+                showFragment(AppBundle(Constant.TEST2_TAG,null))
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-                textMessage.setText(R.string.title_notifications)
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -65,11 +64,9 @@ class MainActivity : BaseActivity()  {
         configObserver()
 
 
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        textMessage = findViewById(R.id.message)
-        navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
-
+        nav_view.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+        nav_view.selectedItemId  = R.id.navigation_home
         MobileAds.initialize(this, "ca-app-pub-4064594014466732~1990332119")
         mPublisherInterstitialAd = PublisherInterstitialAd(this)
 
@@ -115,7 +112,7 @@ class MainActivity : BaseActivity()  {
     }
 
     private fun configBar() {
-        supportActionBar?.hide()
+        //supportActionBar?.hide()
         supportActionBar?.elevation = 0F
         supportActionBar?.setDisplayShowTitleEnabled(false)
         supportActionBar?.setDisplayShowCustomEnabled(true)
@@ -127,7 +124,8 @@ class MainActivity : BaseActivity()  {
         supportFragmentManager.executePendingTransactions()
         val transaction = supportFragmentManager.beginTransaction()
         val newFragment = supportFragmentManager.findFragmentByTag(appBundle.tag)?:when (appBundle.tag) {
-            ""-> Fragment()
+            Constant.TEST_TAG-> TestFragment()
+            Constant.TEST2_TAG-> Test2Fragment()
             else->Fragment()
         }
 
