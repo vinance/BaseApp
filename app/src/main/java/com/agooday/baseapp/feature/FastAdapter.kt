@@ -1,4 +1,4 @@
-package com.agooday.baseapp
+package com.agooday.baseapp.feature
 
 import android.view.LayoutInflater
 import android.view.View

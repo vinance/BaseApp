@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProviders
 import com.agooday.baseapp.base.BaseActivity
+import com.agooday.baseapp.feature.Test2Fragment
+import com.agooday.baseapp.feature.TestFragment
 import com.agooday.baseapp.ina.GoPremiumActivity
 import com.agooday.baseapp.util.AppBundle
 import com.agooday.baseapp.util.AppUtil
